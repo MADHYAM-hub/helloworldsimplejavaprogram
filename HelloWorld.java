@@ -10,7 +10,7 @@ public class HelloWorld {
 
         System.out.print("How old are you? ");
         int age = scanner.nextInt();
-
+System.out.println("Welcome to the MADHYAM Java learning journey!");
         System.out.println("Hello, " + name + "!");
         System.out.println("You are " + age + " years old.");
 
