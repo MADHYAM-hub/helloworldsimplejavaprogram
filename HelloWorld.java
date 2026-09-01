@@ -28,6 +28,6 @@ public class HelloWorld {
             System.out.println("MADHYAM Greeting #" + i + ": Hello, " + name + "!");
         }
 
-        scanner.close();
+scanner.close();
     }
 }
