@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class HelloWorld {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -12,12 +13,13 @@ public class HelloWorld {
         System.out.print("How old are you? ");
         int age = scanner.nextInt();
 
-        System.out.println("Welcome to the MADHYAM Java learning journey!");
-        System.out.println("Hello, " + name + "!");
-        System.out.println("You are " + age + " years old.");
+        Person person = new Person(name, age);
 
-        String ageStatus = getAgeStatus(age);
-        System.out.println(ageStatus);
+        System.out.println("Welcome to the MADHYAM Java learning journey!");
+        System.out.println("Hello, " + person.name + "!");
+        System.out.println("You are " + person.age + " years old.");
+
+        System.out.println(person.getAgeStatus());
 
         ArrayList<String> madhyamMessages = new ArrayList<>();
 
@@ -27,7 +29,9 @@ public class HelloWorld {
         madhyamMessages.add("Humanity");
 
         for (int i = 0; i < madhyamMessages.size(); i++) {
-            System.out.println("MADHYAM Principle #" + (i + 1) + ": " + madhyamMessages.get(i));
+            System.out.println(
+                "MADHYAM Principle #" + (i + 1) + ": " + madhyamMessages.get(i)
+            );
         }
 
         scanner.nextLine();
@@ -35,23 +39,15 @@ public class HelloWorld {
         String again = "yes";
 
         while (again.equalsIgnoreCase("yes")) {
-            showGreeting(name);
-            System.out.print("Would you like another MADHYAM greeting? (yes/no): ");
+            person.showGreeting();
+
+            System.out.print(
+                "Would you like another MADHYAM greeting? (yes/no): "
+            );
+
             again = scanner.nextLine();
         }
 
         scanner.close();
-    }
-
-    public static void showGreeting(String name) {
-        System.out.println("MADHYAM Greeting: Hello, " + name + "!");
-    }
-
-    public static String getAgeStatus(int age) {
-        if (age >= 18) {
-            return "You are an adult.";
-        } else {
-            return "You are a minor.";
-        }
     }
 }
