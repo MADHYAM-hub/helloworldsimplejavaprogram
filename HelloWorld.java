@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -18,15 +19,15 @@ public class HelloWorld {
         String ageStatus = getAgeStatus(age);
         System.out.println(ageStatus);
 
-        String[] madhyamMessages = {
-            "Truth",
-            "Balance",
-            "Purpose",
-            "Humanity"
-        };
+        ArrayList<String> madhyamMessages = new ArrayList<>();
 
-        for (int i = 0; i < madhyamMessages.length; i++) {
-            System.out.println("MADHYAM Principle #" + (i + 1) + ": " + madhyamMessages[i]);
+        madhyamMessages.add("Truth");
+        madhyamMessages.add("Balance");
+        madhyamMessages.add("Purpose");
+        madhyamMessages.add("Humanity");
+
+        for (int i = 0; i < madhyamMessages.size(); i++) {
+            System.out.println("MADHYAM Principle #" + (i + 1) + ": " + madhyamMessages.get(i));
         }
 
         scanner.nextLine();
