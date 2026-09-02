@@ -15,11 +15,8 @@ public class HelloWorld {
         System.out.println("Hello, " + name + "!");
         System.out.println("You are " + age + " years old.");
 
-        if (age >= 18) {
-            System.out.println("You are an adult.");
-        } else {
-            System.out.println("You are a minor.");
-        }
+        String ageStatus = getAgeStatus(age);
+        System.out.println(ageStatus);
 
         scanner.nextLine();
 
@@ -36,5 +33,13 @@ public class HelloWorld {
 
     public static void showGreeting(String name) {
         System.out.println("MADHYAM Greeting: Hello, " + name + "!");
+    }
+
+    public static String getAgeStatus(int age) {
+        if (age >= 18) {
+            return "You are an adult.";
+        } else {
+            return "You are a minor.";
+        }
     }
 }
