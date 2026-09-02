@@ -21,12 +21,15 @@ public class HelloWorld {
             System.out.println("You are a minor.");
         }
 
-        System.out.print("How many greetings would you like? ");
-        int greetings = scanner.nextInt();
+       scanner.nextLine();
 
-        for (int i = 1; i <= greetings; i++) {
-            System.out.println("MADHYAM Greeting #" + i + ": Hello, " + name + "!");
-        }
+String again = "yes";
+
+while (again.equalsIgnoreCase("yes")) {
+    System.out.println("MADHYAM Greeting: Hello, " + name + "!");
+    System.out.print("Would you like another MADHYAM greeting? (yes/no): ");
+    again = scanner.nextLine();
+}
 
 scanner.close();
     }
