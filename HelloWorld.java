@@ -21,16 +21,20 @@ public class HelloWorld {
             System.out.println("You are a minor.");
         }
 
-       scanner.nextLine();
+        scanner.nextLine();
 
-String again = "yes";
+        String again = "yes";
 
-while (again.equalsIgnoreCase("yes")) {
-    System.out.println("MADHYAM Greeting: Hello, " + name + "!");
-    System.out.print("Would you like another MADHYAM greeting? (yes/no): ");
-    again = scanner.nextLine();
-}
+        while (again.equalsIgnoreCase("yes")) {
+            showGreeting(name);
+            System.out.print("Would you like another MADHYAM greeting? (yes/no): ");
+            again = scanner.nextLine();
+        }
 
-scanner.close();
+        scanner.close();
+    }
+
+    public static void showGreeting(String name) {
+        System.out.println("MADHYAM Greeting: Hello, " + name + "!");
     }
 }
