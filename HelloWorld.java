@@ -18,6 +18,17 @@ public class HelloWorld {
         String ageStatus = getAgeStatus(age);
         System.out.println(ageStatus);
 
+        String[] madhyamMessages = {
+            "Truth",
+            "Balance",
+            "Purpose",
+            "Humanity"
+        };
+
+        for (int i = 0; i < madhyamMessages.length; i++) {
+            System.out.println("MADHYAM Principle #" + (i + 1) + ": " + madhyamMessages[i]);
+        }
+
         scanner.nextLine();
 
         String again = "yes";
