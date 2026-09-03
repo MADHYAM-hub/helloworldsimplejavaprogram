@@ -1,13 +1,17 @@
 import requests
 
-url = "https://api.github.com/repos/MADHYAM-hub/helloworldsimplejavaprogram"
+try:
+    response = requests.get(
+        "https://api.github.com/repos/MADHYAM-hub/helloworldsimplejavaprogram"
+    )
+    response.raise_for_status()
+except requests.exceptions.HTTPError as error:
+    print(f"HTTP error {error.response.status_code}: {error}")
+else:
+    print(response.status_code)
 
-response = requests.get(url)
+    data = response.json()
 
-print(response.status_code)
-
-data = response.json()
-
-print(data["full_name"])
-print(data["language"])
-print(data["visibility"])
+    print(data["full_name"])
+    print(data["language"])
+    print(data["visibility"])

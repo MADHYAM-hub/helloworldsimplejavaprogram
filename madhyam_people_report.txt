@@ -1,0 +1,12 @@
+=== MADHYAM People Insights ===
+
+Total people: 3
+Total age: 72
+Average age: 24.0
+
+Adult names: Vikas, Sample Developer
+
+People:
+Vikas — Founder — Adult
+Alice — AI Co-Pilot — Minor
+Sample Developer — Developer — Adult
