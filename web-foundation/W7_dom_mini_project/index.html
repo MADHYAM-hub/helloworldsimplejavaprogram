@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MADHYAM Message Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="studio">
+        <section class="card">
+
+            <header>
+                <h1>MADHYAM Message Studio</h1>
+                <p>Create. Express. Share.</p>
+            </header>
+
+            <form id="messageForm">
+
+                <label for="messageInput">Your Message</label>
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    name="message"
+                    maxlength="120"
+                    placeholder="Write something meaningful..."
+                    required
+                >
+
+                <p class="character-count">
+                    <span id="characterCount">0</span>/120 characters
+                </p>
+
+                <div class="actions">
+                    <button type="submit" class="action-button">
+                        Publish Message
+                    </button>
+
+                    <button type="button" id="clearButton" class="action-button">
+                        Clear
+                    </button>
+                </div>
+
+            </form>
+
+            <section class="preview" aria-live="polite">
+                <h2>Message Preview</h2>
+                <p id="messageOutput">Your message will appear here.</p>
+            </section>
+
+            <p id="statusMessage" aria-live="polite"></p>
+
+        </section>
+    </main>
+
+</body>
+</html>

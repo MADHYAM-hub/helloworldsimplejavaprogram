@@ -27,3 +27,18 @@ changeMessageButton.addEventListener("click", () => {
 
     changeMessageButton.textContent = "Next Message";
 });
+
+const messageInput = document.getElementById("messageInput");
+const showMessageButton = document.getElementById("showMessage");
+
+showMessageButton.addEventListener("click", () => {
+    message.textContent = messageInput.value;
+});
+
+const cardButtons = document.querySelectorAll(".card-button");
+
+console.log(cardButtons);
+
+cardButtons.forEach((button) => {
+    console.log(button.textContent);
+});
