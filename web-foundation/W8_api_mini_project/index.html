@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MADHYAM API Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="explorer">
+
+        <header>
+            <h1>MADHYAM API Explorer</h1>
+            <p>Explore real repository data through the GitHub API.</p>
+        </header>
+
+        <section class="search-panel">
+
+            <form id="repositoryForm">
+
+                <label for="repositoryInput">
+                    GitHub Repository
+                </label>
+
+                <input
+                    type="text"
+                    id="repositoryInput"
+                    value="MADHYAM-hub/helloworldsimplejavaprogram"
+                    placeholder="owner/repository"
+                    required
+                >
+
+                <button type="submit" id="fetchButton">
+                    Fetch Repository
+                </button>
+
+            </form>
+
+            <p id="statusMessage" aria-live="polite">
+                Enter a repository and fetch its details.
+            </p>
+
+        </section>
+
+        <section class="repository-card" aria-live="polite">
+
+            <h2 id="repositoryName">Repository Details</h2>
+
+            <p id="repositoryDescription">
+                Repository information will appear here.
+            </p>
+
+            <div class="repository-details">
+
+                <p>
+                    <strong>Language:</strong>
+                    <span id="language">—</span>
+                </p>
+
+                <p>
+                    <strong>Visibility:</strong>
+                    <span id="visibility">—</span>
+                </p>
+
+                <p>
+                    <strong>Default Branch:</strong>
+                    <span id="defaultBranch">—</span>
+                </p>
+
+                <p>
+                    <strong>Stars:</strong>
+                    <span id="stars">—</span>
+                </p>
+
+            </div>
+
+            <a id="repositoryLink" href="#" target="_blank" rel="noopener noreferrer">
+                Open Repository on GitHub
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

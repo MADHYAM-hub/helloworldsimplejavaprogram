@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f2f7;
+    color: #292437;
+}
+
+.explorer {
+    width: min(100%, 760px);
+    margin: 30px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #563b78;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+}
+
+.search-panel,
+.repository-card {
+    background-color: white;
+    padding: 28px;
+    border: 1px solid #ded9e8;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 20px rgba(40, 30, 60, 0.06);
+}
+
+form {
+    display: grid;
+    gap: 14px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+button {
+    padding: 13px;
+    background-color: #563b78;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#statusMessage {
+    margin-top: 16px;
+    color: #286b42;
+    font-size: 14px;
+}
+
+.repository-card h2 {
+    color: #563b78;
+    overflow-wrap: anywhere;
+}
+
+.repository-details {
+    margin: 24px 0;
+    padding: 16px;
+    background-color: #f6f4f9;
+    border-radius: 8px;
+}
+
+.repository-details p {
+    line-height: 1.7;
+}
+
+.repository-card a {
+    color: #563b78;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.repository-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .search-panel,
+    .repository-card {
+        padding: 20px;
+    }
+
+    .explorer {
+        margin: 10px auto;
+    }
+}
